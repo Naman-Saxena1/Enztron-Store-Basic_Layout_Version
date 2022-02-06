@@ -1,0 +1,30 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:1305px){
+    .top-bar
+    {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+.top-bar
+{
+    border: none;
+    border-bottom: 1px solid var(--dark-blue-color);
+}
+
+.homepage-main
+{
+    height: 100%;
+    background-color: var(--dark-blue-color);
+}
+
+.homepage-content
+{
+    background-color: var(--background-color);
+}
