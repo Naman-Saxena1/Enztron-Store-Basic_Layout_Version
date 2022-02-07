@@ -1,7 +1,90 @@
+:root
+{
+    --dark-grey     : #2F4858;
+    --royal-blue    : #29517C;
+    --sky-blue      : #0e7490;
+}
+
+html
+{
+    background-color: var(--dark-grey);
+}
+
 body
 {
     display: flex;
     flex-direction: column;
+    color: var(--background-color);
+    background-color: var(--dark-grey);
+}
+
+html, body
+{
+    height: fit-content;
+}
+
+For all scrollbars
+body::-webkit-scrollbar 
+{
+    height: 1em;
+}
+  
+body::-webkit-scrollbar-track 
+{
+    background: var(--light-grey);
+}
+  
+body::-webkit-scrollbar-thumb 
+{
+    background: var(--sky-blue);
+}
+
+a, a:visited, a:hover, a:active {
+    color: var(--background-color);
+}
+
+a::after
+{
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: var(--background-color);
+    transition: width .3s;
+}
+
+a:hover::after
+{
+    width: 100%;
+}
+
+.top-bar
+{
+    z-index: 10;
+    border: none;
+    background-color: var(--dark-grey);
+    padding: 2rem 4rem;
+    color: var(--background-color);
+    border-bottom: 1px solid var(--background-color);
+}
+
+.top-bar button
+{
+    background-color: var(--sky-blue);
+}
+
+.top-bar button:hover
+{
+    background: var(--royal-blue)
+                radial-gradient(circle, transparent 1%, 
+                rgb(54, 99, 146) 1%) center/15000%;
+}
+
+.top-bar button:active 
+{
+    background-color: rgb(54, 99, 146);
+    background-size: 100%;
+    transition: background 0s;
 }
 
 @media screen and (max-width:1305px){
@@ -12,19 +95,267 @@ body
     }
 }
 
-.top-bar
-{
-    border: none;
-    border-bottom: 1px solid var(--dark-blue-color);
+@media screen and (max-width:1015px){
+    .top-bar
+    {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 .homepage-main
 {
     height: 100%;
-    background-color: var(--dark-blue-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 4rem 4rem 4rem;
 }
 
 .homepage-content
 {
-    background-color: var(--background-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.genre-cards-container
+{
+    width: 100%;
+    height: 20%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    background-color: transparent;
+}
+
+.explore-cards-container
+{
+    width: 100%;
+    height: 20%;
+    padding: 1rem;
+    display: none;
+    background-color: transparent;
+}
+
+.genre-cards, .explore-card
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-color);
+    background-color: var(--sky-blue);
+    box-shadow: 0 0 1px rgb(48 48 48 / 54%);
+}
+
+.genre-cards:hover , .explore-card:hover
+{
+    background-color: var(--royal-blue);
+}
+
+.explore-card
+{
+    display: none;
+}
+
+.homepage-image-container
+{
+    width: 100%;
+    height: 80%;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.homepage-image
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.new-arrivals-container
+{
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap : 2rem;
+    background-color: transparent;
+}
+
+.new-arrivals
+{
+    position: relative;
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 30% auto;
+    gap: 2rem;
+    color: var(--background-color);
+    background-color: var(--sky-blue);
+}
+
+.new-arrival-badge
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 1rem;
+    background-color: var(--notification-or-error);
+}
+
+.container1
+{
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.new-arrivals-images
+{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.container2
+{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 1rem 1rem 1rem;
+    background-color:transparent;
+}
+
+.container2 h2
+{
+    margin-top: 0;
+}
+
+
+
+@media screen and (max-width:1110px){
+
+    .genre-cards
+    {
+        display: none;
+    }
+
+    .explore-cards-container
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .explore-card
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .new-arrivals-container
+    {
+        margin-top: 4rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+    }
+
+    .new-arrivals
+    {
+        display: flex;
+        align-items: center;
+        max-height: fit-content;
+    }
+
+    .container1
+    {
+        align-items: center;
+        height: 25rem;
+    }
+
+    .container2
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .new-arrivals-images
+    {
+        max-width: 100%;
+    }
+    .new-arrivals-description
+    {
+        display: none;
+    }
+}
+
+.footer
+{
+    width: 100%;
+    max-width: 100%;
+    padding-top: 3rem;
+    margin-top: 8rem;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-grey);
+    border-top: 1px solid var(--background-color);
+    text-align: center;
+}
+
+.footer-div
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-shrink: 2;
+    padding-bottom: 3rem;
+    justify-content: space-evenly;
+}
+
+.footer-link
+{
+    text-decoration: none;
+    color: var(--background-color);
+    padding: 2rem 0 0 0;
+}
+
+.footer .footer-link::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: var(--background-color);
+    transition: width .3s;
+}
+
+.footer .footer-link:hover::after 
+{
+    width: 100%;
+}
+
+
+@media only screen and (max-width:300px)
+{
+    .footer-div
+    {
+        flex-direction: column;
+    }
 }
