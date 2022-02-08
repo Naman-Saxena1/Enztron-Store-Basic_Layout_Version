@@ -7,17 +7,21 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://enztron-dev-branch.netlify.app/components.css">
-    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/x-icon" href="../../Images/favicon-icon.png">
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="product.css">
+    <script defer src="./product.js"></script>
     <title>Enztron Store | Products</title>
 </head>
 <body>
     <div class="top-bar">
         <div class="left-topbar-container">
             <button class="icon-btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
-            <h2>Enztron Book Store</h2>
+            <h2 id="top-bar-brand-name">Enztron Book Store</h2>
             <div class="search-bar">
                 <input class="search-bar-input" placeholder="Search"/>
                 <button id="search-bar-btn">
@@ -43,10 +47,386 @@
     </div>
     <div class="product-page-layout-grid">
         <aside class="product-page-sidebar">
-            <p>This is sidebar</p>
+            
+            <div class="filter-clear-options">
+                <p class="sidebar-filter-option">Filter</p>
+                <p class="sidebar-clear-option text-underline">Clear</p>
+            </div>
+
+            <div class="price-slider">
+                <p>Price</p>
+
+                <div class="price-input">
+                    <div class="field">
+                        <span>Min</span>
+                        <input type="number" class="input-min" value="2500"/>
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                        <span>Max</span>
+                        <input type="number" class="input-max" value="7500"/>
+                    </div>
+                </div>
+                
+                <div class="slider">
+                    <div class="progress">
+
+                    </div>
+                </div>
+
+                <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="10000" value="2500" step="100"/>
+                    <input type="range" class="range-max" min="0" max="10000" value="7500" step="100"/>
+                </div>
+
+            </div>
+            
+            <div class="product-category">
+                <p>Category</p>
+                <div class="checkbox-item">
+                    <input id="fiction-checkbox" type="checkbox">
+                    <label for="fiction-checkbox">
+                        Fiction
+                    </label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input id="non-fiction-checkbox" type="checkbox">
+                    <label for="non-fiction-checkbox">
+                        Non-Fiction
+                    </label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input id="romance-checkbox" type="checkbox">
+                    <label for="romance-checkbox">
+                        Romance
+                    </label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input id="psychology-checkbox" type="checkbox">
+                    <label for="psychology-checkbox">
+                        Psychology
+                    </label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input id="sci-fi-checkbox" type="checkbox">
+                    <label for="sci-fi-checkbox">
+                        Sci-fi
+                    </label>
+                </div>
+                
+                <div class="checkbox-item">
+                    <input id="tech-checkbox" type="checkbox">
+                    <label for="tech-checkbox">
+                        Tech
+                    </label>
+                </div>
+            </div>
+
+            <div class="product-page-rating-radio">
+                <p>Rating</p>
+
+                <div>
+                    <input type="radio" id="4-stars-or-above" name="rating" value="4-stars-or-above">
+                    <label for="4-stars-or-above">4 stars or above</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="3-stars-or-above" name="rating" value="3-stars-or-above">
+                    <label for="3-stars-or-above">3 stars or above</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="2-stars-or-above" name="rating" value="2-stars-or-above">
+                    <label for="2-stars-or-above">2 stars or above</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="1-stars-or-above" name="rating" value="1-stars-or-above">
+                    <label for="1-stars-or-above">1 stars or above</label>
+                </div>
+
+            </div>
+
+            <div class="product-page-sortby-radio">
+                <p>Sort By</p>
+
+                <div>
+                    <input type="radio" id="price-low-to-high" name="sort-by" value="price-low-to-high">
+                    <label for="price-low-to-high">Price - Low to High</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="price-high-to-low" name="sort-by" value="price-high-to-low">
+                    <label for="price-high-to-low">Price - High to Low</label>
+                </div>
+            </div>
         </aside>
         <div class="product-page-content">
-    
+            <h3>Showing All Products  <small>( Showing 12 products )</small></h3>
+            <div class="products-card-grid">
+
+                <div class="card-basic">
+                    <img src="https://enztron-dev-branch.netlify.app/Icons-and-Images/Book-Covers/Book_Cover-Thus_Spoke_Zarathustra.jpg" alt="Book - Thus Spoke Zarathustra">
+                    <div class="card-item-details">
+                        <h3>Thus Spoke Zarathustra</h3>
+                        <h4>- By Friedrich Nietzche</h4>
+                        <p><b>₹ 300   </b><del>₹ 400</del>   
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                 Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Best Seller
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="card-basic">
+                    <img src="https://enztron-dev-branch.netlify.app/Icons-and-Images/Book-Covers/Book_Cover-Top_5_Regrets_Of_The_Dying.jpg" alt="Book-Top_5_Regrets_Of_The_Dying">
+                    <div class="card-item-details">
+                        <h3>Top 5 Regrets Of The Dying</h3>
+                        <h4>- By Bronnie Ware</h4>
+                        <p><b>&#8377; 225 &nbsp;&nbsp;</b><del>&#8377; 300</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Trending
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="https://enztron-dev-branch.netlify.app/Icons-and-Images/Book-Covers/Book_Cover-Man's_Search_For_Meaning.jpg" alt="Book-Man's Search For Meaning">
+                    <div class="card-item-details">
+                        <h3>Man's Search For Meaning</h3>
+                        <h4>- By Victor E. Frankl</h4>
+                        <p><b>₹ 300   </b><del>₹ 400</del>   
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                 Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Popular
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="https://enztron-dev-branch.netlify.app/Icons-and-Images/Book-Covers/Book_Cover-The_Stranger.jpg" alt="Book-The Stranger">
+                    <div class="card-item-details">
+                        <h3>The Stranger</h3>
+                        <h4>- By Albert Camus</h4>
+                        <p><b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Best Reviews
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="https://enztron-dev-branch.netlify.app/Icons-and-Images/Book-Covers/Book_Cover-The_Gulag_Archipelago.jpg" alt="Book-The Gulag Archipelago">
+                    <div class="card-item-details">
+                        <h3>The Gulag Archipelago</h3>
+                        <h4>- By Aleksandr Solzhenitsyn</h4>
+                        <p><b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Thought Provoking
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="../../Images/HomePage/harry-potter-and-the-deathly-hallows.jpg" alt="Book-Harry Potter Deathly Hollows">
+                    <div class="card-item-details">
+                        <h3>Harry Potter Deathly Hollows</h3>
+                        <h4>- By J. K. Rowling</h4>
+                        <p><b>₹ 750   </b><del>₹ 1000</del>   
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                 Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Popular
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="../../Images/HomePage/Game_Of_Thrones-Dance-with-Dragons.jpg" alt="Book-Game Of Thrones Dance with Dragons">
+                    <div class="card-item-details">
+                        <h3>GOT - Dance with Dragons</h3>
+                        <h4>- By George R. R. Martin</h4>
+                        <p><b>₹ 750   </b><del>₹ 1000</del>   
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                 Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Popular
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="https://enztron-dev-branch.netlify.app/Icons-and-Images/Book-Covers/Book_Cover-The_Secret.jpg" alt="Book-The_Secret">
+                    <div class="card-item-details">
+                        <h3>The Secret - Self Help Book</h3>
+                        <h4>- By Rhonda Byrne</h4>
+                        <p><b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Popular
+                        </div>
+                        <button class="card-dismiss-btn outline-card-secondary-btn">X</button>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="../../Images/Product-Page/Naruto Volume-1.jpg" alt="Manga-Naruto Volume-1">
+                    <div class="card-item-details">
+                        <h3>Naruto Manga Volume-1</h3>
+                        <h4>- By Masashi Kishimoto</h4>
+                        <p><b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Manga
+                        </div>
+                        <button class="card-dismiss-btn outline-card-secondary-btn">X</button>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="../../Images/Product-Page/Naruto Volume-72.jpg" alt="Manga-Naruto Volume-72">
+                    <div class="card-item-details">
+                        <h3>Naruto Manga Volume-1</h3>
+                        <h4>- By Masashi Kishimoto</h4>
+                        <p><b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Manga
+                        </div>
+                        <button class="card-dismiss-btn outline-card-secondary-btn">X</button>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="../../Images/Product-Page/Dan Brown-Angels and Demons.jpg" alt="Book - Angels and Demons">
+                    <div class="card-item-details">
+                        <h3>Angels and Demons</h3>
+                        <h4>- By Dan Brown</h4>
+                        <p><b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Popular
+                        </div>
+                        <button class="card-dismiss-btn outline-card-secondary-btn">X</button>
+                    </div>
+                </div>
+
+                <div class="card-basic">
+                    <img src="../../Images/Product-Page/Dan Brown- Da Vinci Code.jpg" alt="Book - Da Vinci Code">
+                    <div class="card-item-details">
+                        <h3>Da Vinci Code</h3>
+                        <h4>- By Dan Brown</h4>
+                        <p><b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <p class="discount-on-card">25% off</p>
+                        </p>
+                        <div class="card-button">
+                            <button class="outline-card-secondary-btn">
+                                <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                                &nbsp;Add To Cart
+                            </button>
+                            <button class="card-icon-btn outline-card-secondary-btn"><i class="fa fa-heart-o fa-x" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="badge-on-card">
+                            Popular
+                        </div>
+                        <button class="card-dismiss-btn outline-card-secondary-btn">X</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>

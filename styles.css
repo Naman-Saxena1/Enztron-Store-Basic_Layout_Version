@@ -3,6 +3,7 @@
     --dark-grey     : #2F4858;
     --royal-blue    : #29517C;
     --sky-blue      : #0e7490;
+    --background-color-dull-yellow: rgb(224, 224, 212);
 }
 
 html
@@ -56,6 +57,11 @@ a::after
 a:hover::after
 {
     width: 100%;
+}
+
+#top-bar-brand-name
+{
+    cursor: pointer;
 }
 
 .top-bar
