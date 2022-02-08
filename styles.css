@@ -104,6 +104,11 @@ a:hover::after
     }
 }
 
+.search-bar .search-bar-input
+{
+    outline: none;
+}
+
 .homepage-main
 {
     height: 100%;
