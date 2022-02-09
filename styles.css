@@ -40,6 +40,11 @@ body::-webkit-scrollbar-thumb
     background: var(--sky-blue);
 }
 
+h4
+{
+    font-size: 1.4rem;
+}
+
 a, a:visited, a:hover, a:active {
     color: var(--background-color);
 }
@@ -74,6 +79,11 @@ a:hover::after
     background-color: var(--sky-blue);
 }
 
+#navbar-login-btn
+{
+    background-color: var(--pink-color);
+}
+
 .top-bar button:hover
 {
     background: var(--royal-blue)
@@ -104,9 +114,26 @@ a:hover::after
     }
 }
 
-.search-bar .search-bar-input
+#top-bar-brand-name
+{
+    cursor: pointer;
+}
+
+.search-bar
+{
+    border: none;
+}
+
+.search-bar-input
 {
     outline: none;
+    font-family: inherit;
+}
+
+#search-bar-btn
+{
+    border: none;
+    padding: 9.6px;
 }
 
 .homepage-main
@@ -308,6 +335,11 @@ a:hover::after
     {
         display: none;
     }
+}
+
+.card-basic:hover, .card-basic-horizontal:hover
+{
+    cursor: pointer;
 }
 
 .footer

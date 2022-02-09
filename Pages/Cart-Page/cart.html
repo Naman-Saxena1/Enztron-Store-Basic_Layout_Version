@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://enztron-dev-branch.netlify.app/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../Images/favicon-icon.png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <script defer src="../topnavbar.js"></script>
+    <title>Enztron Store | Cart</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left-topbar-container">
+            <button class="icon-btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <h2 id="top-bar-brand-name">Enztron Book Store</h2>
+            <div class="search-bar">
+                <input class="search-bar-input" placeholder="Search"/>
+                <button id="search-bar-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="right-topbar-container">
+            <button id="navbar-login-btn" class="solid-primary-btn">Login</button>
+            <button id="my-wishlist-btn" class="icon-btn">
+                <div class="icon-count-badge">
+                    <i class="fa fa-heart-o fa-x" aria-hidden="true" ></i>
+                    <span class="count-badge-x">0</span>
+                </div>
+            </button>
+            <button id="my-cart-btn" class="icon-btn">
+                <div class="icon-count-badge">
+                    <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                    <span class="count-badge-x">0</span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="cart-content-container">
+        <h2>Cart (2 items)</h2>
+        <div class="cart-grid">
+            <div class="cart-items-grid">
+                
+                <div class="card-basic-horizontal">
+                    <img class="cart-item-book-img" src="https://enztron-dev-branch.netlify.app/Icons-and-Images/Book-Covers/Book_Cover-The_Murder_Of_Roger_Ackroyd.jpg" alt="Book-The Murder Of Roger Ackroyd">
+                    <div id="cart-item-detail" class="card-item-details">
+                        
+                        <h3>The Murder Of Roger Ackroyd</h3>
+                        <h4>- By Agatha Christie</h4>
+                        <p>
+                            <b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <span class="discount-on-card">25% off</span>
+                        </p>
+
+                        <div class="item-cart-quantity">
+                            <p class="cart-quantity-para">Quantity : &nbsp;&nbsp;</p>
+                            <div>
+                                <button class="cart-quantity-minus-btn">-</button>
+                                <input class="cart-item-quantity-input" type="number" min="0" value="1">
+                                <button class="cart-quantity-plus-btn">+</button>
+                            </div>
+                        </div>
+
+                        <div class="cart-horizontal-card-btns card-button">
+                            <button class="solid-primary-btn">Remove from Cart</button>
+                            <button class="outline-primary-btn">Move to Wishlist</button>
+                        </div>
+                        <div class="badge-on-card">
+                            Best Suspense
+                        </div>
+                        <button class="card-dismiss-btn outline-card-secondary-btn">X</button>
+                    </div>
+                </div>
+
+                <div class="card-basic-horizontal">
+                    <img class="cart-item-book-img" src="../../Images/Product-Page/Dan Brown-Angels and Demons.jpg" alt="Book - Angels and Demons">
+                    <div id="cart-item-detail" class="card-item-details">
+                        
+                        <h3>Angels and Demons</h3>
+                        <h4>- By Dan Brown</h4>
+                        <p>
+                            <b>&#8377; 300 &nbsp;&nbsp;</b><del>&#8377; 400</del> &nbsp;&nbsp;
+                            <span class="discount-on-card">25% off</span>
+                        </p>
+
+                        <div class="item-cart-quantity">
+                            <p class="cart-quantity-para">Quantity : &nbsp;&nbsp;</p>
+                            <div>
+                                <button class="cart-quantity-minus-btn">-</button>
+                                <input class="cart-item-quantity-input" type="number" min="0" value="1">
+                                <button class="cart-quantity-plus-btn">+</button>
+                            </div>
+                        </div>
+
+                        <div class="cart-horizontal-card-btns card-button">
+                            <button class="solid-primary-btn">Remove from Cart</button>
+                            <button class="outline-primary-btn">Move to Wishlist</button>
+                        </div>
+
+                        <div class="badge-on-card">
+                            Popular
+                        </div>
+                        <button class="card-dismiss-btn outline-card-secondary-btn">X</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cart-bill">
+                <h3>PRICE DETAILS</h3>
+
+                <hr>
+
+                <div class="cart-price-container">
+                    <h4>Price <span>(2 items)</span></h4>
+                    <h4 id="price-sum"><b>&#8377;800</b></h4>
+                </div>
+
+                <div class="cart-discount-container">
+                    <h4>Discount</h4>
+                    <h4 id="price-discount"><b>- &#8377;200</b></h4>
+                </div>
+
+                <div class="cart-delivery-charges-container">
+                    <h4>Discount</h4>
+                    <h4 id="delivery-charges"><b>&#8377;50</b></h4>
+                </div>
+
+                <hr>
+
+                <div class="cart-delivery-charges-container">
+                    <h3><b>TOTAL CHARGES</b></h3>
+                    <h4 id="total-charges"><b>&#8377;650</b></h4>
+                </div>
+
+                <hr>
+
+                <h4>You will save <b>&#8377;200</b> on this order</h4>
+
+                <button class="place-order-btn solid-secondary-btn">Place Order</button>
+
+            </div>
+        </div>
+    </div>
+    <script defer src="cart.js"></script>
+</body>
+</html>

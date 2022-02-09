@@ -1,9 +1,3 @@
-let topBarBrandName = document.querySelector("#top-bar-brand-name")
-
-topBarBrandName.addEventListener('click',()=>{
-    window.location="/"
-})
-
 const priceInput = document.querySelectorAll(".price-input input");
 const rangeInput = document.querySelectorAll(".range-input input");
 const progress   = document.querySelector(".slider .progress");
