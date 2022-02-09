@@ -1,0 +1,54 @@
+body
+{
+    height: 100vh;
+}
+
+.login-content-container
+{
+    /* max-height: fit-content; */
+    height: 100%;
+    max-width: fit-content;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--royal-blue);
+    padding: 5rem;
+    border-radius: 6px;
+}
+
+.signup-form
+{
+    padding: 3rem 4rem;
+}
+
+.user-options-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remember-me-container
+{
+    display: flex;
+    align-items: center;
+}
+
+#forgot-password
+{
+    color: var(--royal-blue);
+}
+
+.new-user-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+#new-user-link
+{
+    font-size: 1.6rem;
+    text-align: center;
+}
