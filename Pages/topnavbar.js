@@ -7,7 +7,7 @@ topBarBrandName.addEventListener('click',()=>{
 })
 
 showMyWishlistBtn.addEventListener('click',()=>{
-    if(window.location.pathname==="/")
+    if(window.location.pathname==="/" || window.location.pathname==="/index.html")
     {
         window.location="./Pages/Wishlist-Page/wishlist.html"
     }
@@ -18,7 +18,7 @@ showMyWishlistBtn.addEventListener('click',()=>{
 })
 
 showMyCartBtn.addEventListener('click',()=>{
-    if(window.location.pathname==="/")
+    if(window.location.pathname==="/" || window.location.pathname==="/index.html")
     {
         window.location="./Pages/Cart-Page/cart.html"
     }
