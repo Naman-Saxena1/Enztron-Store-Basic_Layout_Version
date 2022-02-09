@@ -16,7 +16,6 @@ body
     color: var(--royal-blue);
     padding: 5rem;
     border-radius: 6px;
-    background-color: var();
 }
 
 .signup-form
@@ -24,7 +23,7 @@ body
     padding: 3rem 4rem;
 }
 
-.remember-user-and-forgot-password-container
+.user-options-container
 {
     display: flex;
     align-items: center;
@@ -42,13 +41,13 @@ body
     color: var(--royal-blue);
 }
 
-.existing-user-container
+.new-user-container
 {
     display: flex;
     justify-content: center;
 }
 
-#existing-user-link
+#new-user-link
 {
     font-size: 1.6rem;
     text-align: center;

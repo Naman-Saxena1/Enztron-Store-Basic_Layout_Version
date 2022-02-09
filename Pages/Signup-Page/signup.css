@@ -16,7 +16,6 @@ body
     color: var(--royal-blue);
     padding: 5rem;
     border-radius: 6px;
-    background-color: var();
 }
 
 .signup-form
@@ -24,17 +23,11 @@ body
     padding: 3rem 4rem;
 }
 
-.remember-user-and-forgot-password-container
+.accept-terms-container
 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.remember-me-container
-{
-    display: flex;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 #forgot-password
