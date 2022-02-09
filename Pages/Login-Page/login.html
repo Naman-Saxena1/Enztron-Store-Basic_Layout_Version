@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://enztron-dev-branch.netlify.app/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../../Images/favicon-icon.png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="login.css">
+    <script defer src="../topnavbar.js"></script>
+    <title>Enztron Store | Wishlist</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="left-topbar-container">
+            <button id="top-bar-ham-menu-btn" class="icon-btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <h2 id="top-bar-brand-name">Enztron Book Store</h2>
+            <div class="search-bar">
+                <input class="search-bar-input" placeholder="Search"/>
+                <button id="search-bar-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="right-topbar-container">
+            <button id="navbar-login-btn" class="solid-primary-btn">Login</button>
+            <button id="my-wishlist-btn" class="icon-btn">
+                <div class="icon-count-badge">
+                    <i class="fa fa-heart-o fa-x" aria-hidden="true" ></i>
+                    <span class="count-badge-x">4</span>
+                </div>
+            </button>
+            <button id="my-cart-btn" class="icon-btn">
+                <div class="icon-count-badge">
+                    <i class="fa fa-shopping-cart fa-x" aria-hidden="true" ></i>
+                    <span class="count-badge-x">2</span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="login-content-container">
+        <form class="signup-form">
+            <h2>Login</h2>
+            
+            <div class="signup-input-container">
+                <label for="signup-input-name"><h4>Email address</h4></label>
+                <input id="signup-input-email" class="signup-form-input" type="email" placeholder="Email" required/>
+            </div>
+
+            <div class="signup-input-container">
+                <label for="signup-input-name"><h4>Password</h4></label>
+                <input id="signup-input-password" class="signup-form-input" type="password" placeholder="Password" required/>
+            </div>
+
+            <div class="remember-user-and-forgot-password-container">
+                <div class="remember-me-container">
+                    <input type="checkbox" id="remember-me"/>
+                    <label for="remember-me">Remember Me</label>
+                </div>
+                <div>
+                    <a class="blue-links" id="forgot-password" href="">Forgot Password?</a>
+                </div>
+            </div>
+
+            <button type="submit" class="form-signup-btn">Login</button>
+
+            <div class="existing-user-container">
+                <a class="blue-links" id="existing-user-link" href="../Signup-Page/signup.html">Create new account &nbsp; ></a>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
